@@ -1,0 +1,17 @@
+version: v2
+plugins:
+  - local: protoc-gen-es
+    out: src/gen
+    opt: 
+      - target=js
+      - ts_nocheck=false
+  - local: protoc-gen-connect-query
+    out: src/gen
+    opt: 
+      - target=js
+      - ts_nocheck=false
+
+inputs:
+  - git_repo: https://github.com/alexongh/connect-query-protobuf 
+    tag: v0.1.0
+
